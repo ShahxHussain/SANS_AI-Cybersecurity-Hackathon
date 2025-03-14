@@ -1,0 +1,210 @@
+
+.Main-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Visby Round CF', sans-serif;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.Profile {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid rgb(255, 253, 253);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+
+.summary-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: -5px;
+    text-align: center;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    gap: 140px;
+    width: 86%;
+    padding: 20px;
+    border: 5px solid rgb(255, 253, 253);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.left-profile-info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.upper-left-profile-info{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.lower-left-profile-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-profile-info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.right-profile-info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+
+.bold-light {
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 87%;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+.dashboard-item {
+    text-align: center;
+    position: relative;
+    width: 300px;
+}
+
+.dashboard-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -10vh;
+    width: 1px;
+    background-color: #ddd;
+}
+
+.dashboard-item h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.dashboard-item p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.dashboard-item p svg {
+    margin-right: 10px;
+}
+
+.dashboard-charts {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.chart-container {
+    flex: 1 1 40%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    min-width: 350px;
+}
+@media screen and (max-width: 790px) {
+    .Profile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-info {
+        width: 100%;
+    }
+
+    .Image-details {
+        width: 50%;
+    }
+
+    .profile-image {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .chart-container {
+        width: 100%;
+    }
+}
+
+/* Loader styles */
+/* Loader container to center the loader */
+.loader-container {
+    position: absolute;
+    top: 0;
+    left: 90;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the loader is above other content */
+  }
+  
+  /* Loader animation */
+  .loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  

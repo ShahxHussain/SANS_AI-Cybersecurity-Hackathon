@@ -1,0 +1,208 @@
+/* Main container for the preprocessing component */
+.preprocessing-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+/* Container for options and chart in a single row */
+.options-and-chart {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+/* Preprocessing options styling */
+.preprocessing-options {
+  width: 45%;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.preprocessing-options h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.checkbox-option input {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.checkbox-option label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.apply-button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  float: right;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.apply-button:hover {
+  background-color: #005f99;
+}
+
+/* Chart container styling */
+.chart-container-1 {
+  width: 45%;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Summary panel styling */
+.summary-container {
+  width: 90%;
+  margin-top: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.summary-section-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.summary-section {
+  width: 45%;
+}
+
+.summary-graph {
+  width: 45%;
+}
+
+/* Summary panel title styling */
+.summary-container h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.summary-section h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.summary-table th,
+.summary-table td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.summary-table th {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.summary-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .options-and-chart,
+  .summary-section-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .preprocessing-options,
+  .chart-container,
+  .summary-section,
+  .summary-graph {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Progress Bar Container */
+.progress-container {
+  width: 100%;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 20px;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #42a5f5;
+  width: 0; /* Dynamic width based on progress */
+  transition: width 0.3s ease;
+}
+
+.clear-button {
+  background-color: #ff4d4d; /* Red background for a clear/reset action */
+  color: white; /* White text color for contrast */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Add padding for a button-like appearance */
+  margin-left: 10px; /* Add space between the Apply button and Clear button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size for readability */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.clear-button:hover {
+  background-color: #ff3333; /* Darker red on hover */
+}
+
+.clear-button:active {
+  background-color: #cc0000; /* Even darker red when clicked */
+  transform: scale(0.95); /* Slight shrink effect on click */
+}
