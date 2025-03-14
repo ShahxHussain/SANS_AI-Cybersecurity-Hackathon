@@ -52,7 +52,8 @@ function Navbar({ selectedDataset, setSelectedDataset }) {
   // Check if current route is Preprocessing or Data Visualization
   const showDatasetDropdown =
     location.pathname.includes("Main/Preprocessing") ||
-    location.pathname.includes("/Main/data-visualization");
+    location.pathname.includes("/Main/data-visualization") || 
+    location.pathname.includes("/Main/intrusion-detection");
 
   return (
     <div className="navbar">
