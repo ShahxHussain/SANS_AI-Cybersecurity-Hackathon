@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// const API_URL = 'http://localhost:5000';
+const API_URL = 'http://localhost:5000';
 
-const API_URL = 'https://sans-ai-cybersecurity-hackathon.vercel.app';
+// const API_URL = 'https://sans-ai-cybersecurity-hackathon.vercel.app';
 
 export const signup = async (userData) => {
   const response = await axios.post(`${API_URL}/signup`, userData);
