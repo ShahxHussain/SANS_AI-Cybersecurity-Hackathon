@@ -11,7 +11,7 @@
       }
     ],
     "routes": [
-      { "src": "/datasets/(.*)", "dest": "/index.js" }
+      { "src": "/(.*)", "dest": "/" }
     ]
   }
   
