@@ -27,6 +27,20 @@ function Navbar({ selectedDataset, setSelectedDataset }) {
     fetchDatasets();
   }, []);
 
+  useEffect(() => {
+    fetchDatasets(); // Fetch datasets when Navbar mounts
+
+    const handleDatasetUpdate = () => {
+        fetchDatasets(); // ✅ Fetch datasets when a new dataset is uploaded
+    };
+
+    window.addEventListener("datasetUpdated", handleDatasetUpdate);
+
+    return () => {
+        window.removeEventListener("datasetUpdated", handleDatasetUpdate);
+    };
+}, []);
+
   const fetchDatasets = async () => {
     try {
       const data = await fetchAnalysisData(); // Fetch datasets from the backend
