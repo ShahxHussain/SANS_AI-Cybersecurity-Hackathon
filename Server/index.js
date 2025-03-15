@@ -3,7 +3,6 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./Connection.js"; // Ensure this matches the export in Connection.js
-// import authRoutes from "./Routes/authRoutes.js";
 import datasetRoutes from "./Routes/datasetRoutes.js";
 
 dotenv.config(); // Load environment variables
@@ -23,7 +22,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Serve routes
-// app.use("/", authRoutes);
 app.use("/datasets", datasetRoutes);
 
 
